@@ -1,15 +1,15 @@
-MY_MAKE_SRCS = test
-MY_MAKE_TARGET = test
-MY_MAKE_BUILD_FLAGS = -I.
+TEST_BUILD_SRCS = test
+TEST_BUILD_TARGET = test
+TEST_BUILD_FLAGS = -I .
 
-$(eval $(call build_executable, \
-        $(MY_MAKE_SRCS),                        \
-        $(MY_MAKE_TARGET),                      \
-        $(MY_MAKE_BUILD_FLAGS)          \
+$(eval $(call build_executable,		\
+	$(TEST_BUILD_SRCS),				\
+	$(TEST_BUILD_TARGET),			\
+	$(TEST_BUILD_FLAGS)				\
 ))
 
-$(eval $(call clean_target,             \
-        $(MY_MAKE_SRCS),                        \
-        $(MY_MAKE_TARGET),                      \
-        $(MY_MAKE_BUILD_FLAGS)          \
+$(eval $(call clean_target,			\
+	$(TEST_BUILD_SRCS),				\
+	$(TEST_BUILD_TARGET),			\
+	$(TEST_BUILD_FLAGS)				\
 ))
